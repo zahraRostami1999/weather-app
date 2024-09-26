@@ -19,7 +19,11 @@ const cities = [
 ];
 
 function App() {
+  const handleChange = (e) => {
+    const { value } = e.target;
 
+    JSON.parse(value);
+  };
   return (
     <div className="App">
       <select onchange={handleChange}>
