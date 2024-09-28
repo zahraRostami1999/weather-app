@@ -20,6 +20,7 @@ const cities = [
 ];
 
 function App() {
+
   const handleChange = (e) => {
     const cityValue = e.target.value; // cityValue Type = string
     const setCity = JSON.parse(cityValue); // setCity Type = object
@@ -32,6 +33,8 @@ function App() {
   };
   return (
     <div className="App">
+      <h1>Welcome To Weather App</h1>
+      <h3>Select your location</h3>
       <select onChange={handleChange}>
         {cities.map((city) => (
           <option key={city.name} value={JSON.stringify(city)}>
