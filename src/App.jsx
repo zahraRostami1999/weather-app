@@ -1,3 +1,4 @@
+import { getCurrentWeather } from "./API.js";
 import "./App.css";
 
 const cities = [
@@ -20,13 +21,18 @@ const cities = [
 
 function App() {
   const handleChange = (e) => {
-    const { value } = e.target;
+    const cityValue = e.target.value; // cityValue Type = string
+    const setCity = JSON.parse(cityValue); // setCity Type = object
+    
+    getCurrentWeather(setCity.lat, setCity.lon).then((weather) => {
+      console.log(weather); 
+    });
 
-    JSON.parse(value);
+    
   };
   return (
     <div className="App">
-      <select onchange={handleChange}>
+      <select onChange={handleChange}>
         {cities.map((city) => (
           <option key={city.name} value={JSON.stringify(city)}>
             {city.name}
