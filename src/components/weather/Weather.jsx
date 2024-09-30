@@ -1,7 +1,7 @@
 import styled from "./weather.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-
+import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 function Weather() {
   return (
@@ -16,9 +16,12 @@ function Weather() {
             <FontAwesomeIcon
               icon={faSearch}
               size="lg"
-              style={{ color: "black"}}
+              style={{ color: "black" }}
             />
           </button>
+        </div>
+        <div className={styled.weatherIcon}>
+          <FontAwesomeIcon icon={faSun} size="10x" color="orange" />
         </div>
       </div>
     </div>
