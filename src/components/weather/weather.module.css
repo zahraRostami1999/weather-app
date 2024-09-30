@@ -12,7 +12,7 @@
 
 .weatherWrapper{
     min-width: 40%;
-    min-height: 50%;
+    min-height: 60%;
     padding: 10px;
     background-color: rgb(53, 141, 141);
     border-radius: 11px;
@@ -47,4 +47,9 @@
     background-color: rgb(237, 134, 9);
     border: none;
     cursor: pointer;
+}
+
+.weatherIcon{
+    display: flex;
+    justify-content: center;
 }
