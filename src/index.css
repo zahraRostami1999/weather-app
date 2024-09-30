@@ -3,3 +3,8 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.app{
+  background-color: rgb(40, 40, 168);
+  display: grid;
+}
