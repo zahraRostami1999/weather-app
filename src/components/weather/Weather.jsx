@@ -21,7 +21,10 @@ function Weather() {
           </button>
         </div>
         <div className={styled.weatherIcon}>
-          <FontAwesomeIcon icon={faSun} size="10x" color="orange" />
+          <FontAwesomeIcon icon={faSun} size="9x" color="orange" />
+        </div>
+        <div className={styled.weatherTemp}>
+            <h3>20°C</h3>
         </div>
       </div>
     </div>
