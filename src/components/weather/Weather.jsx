@@ -2,22 +2,28 @@ import styled from "./weather.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState, useRef } from "react";
 
 function Weather() {
-
-    const weather = () => {
-        const search = async (city) => {
-        try{
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.API_ID}`
-            const response = await fetch(url);
-            const data = await response.json();
-            console.log(data); // Display the weather data in the console for testing purposes
-        }
-        catch(error){
-            console.error("Error fetching weather data:", error);
-        }
+    const inputRef = useRef()
+  const API = "05086f9c1b192c3ea544760f9f7c73d2";
+  const [weatherData, setWeatherData] = useState(false);
+  const search = async (city) => {
+    try {
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log(data); // Display the weather data in the console for testing purposes
+      setWeatherData({tempurature: Math.floor(data.main.temp)});
+      console.log(weatherData); 
+    } catch (error) {
+      console.error("Error fetching weather data:", error);
     }
-}
+  };
+
+  useEffect(() => {
+    search("Germi");
+  }, []);
 
   return (
     <div className={styled.container}>
@@ -26,8 +32,8 @@ function Weather() {
           <h1>Weather App</h1>
         </div>
         <div className={styled.search}>
-          <input type="text" placeholder="Enter City:" />
-          <button>
+          <input ref={inputRef} type="text" placeholder="Enter City:" />
+          <button onClick={() => search(inputRef.current.value)}>
             <FontAwesomeIcon
               icon={faSearch}
               size="lg"
@@ -39,7 +45,7 @@ function Weather() {
           <FontAwesomeIcon icon={faSun} size="9x" color="orange" />
         </div>
         <div className={styled.weatherTemp}>
-            <h3>20°C</h3>
+          <h3>{weatherData.tempurature}°C</h3>
         </div>
       </div>
     </div>
