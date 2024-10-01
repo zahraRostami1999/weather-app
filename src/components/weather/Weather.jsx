@@ -36,7 +36,7 @@ function Weather() {
           <h1>Weather App</h1>
         </div>
         <div className={styled.search}>
-          <input ref={inputRef} type="text" placeholder="Enter City:" />
+          <input ref={inputRef} type="text" placeholder="City:" />
           <button onClick={() => search(inputRef.current.value)}>
             <FontAwesomeIcon
               icon={faSearch}
