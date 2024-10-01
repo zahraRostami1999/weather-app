@@ -3,7 +3,6 @@
 
 .container{
     min-height: 100vh;
-    background-color: rgb(220, 242, 242);
     align-items: center;
     display: flex;
     justify-content: center;
@@ -14,9 +13,10 @@
     min-width: 35%;
     min-height: 65%;
     padding: 10px;
-    background-color: rgb(71, 165, 223);
+    background-color: rgb(238, 226, 202);
     border-radius: 11px;
     flex-wrap: wrap;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
 }
 
 .title{
@@ -26,6 +26,7 @@
 } 
 
 .search{
+    color: (#333);
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -40,15 +41,20 @@
     font-size: 18px;
     flex-grow: 0.8;
     outline: none;
+    color: (#333);
 }
 
 .search button{
     border-radius: 50px;
     margin-left: 10px;
     padding: 10px 12px;
-    background-color: rgb(237, 134, 9);
+    background-color: rgb(250, 153, 34);
     border: none;
     cursor: pointer;
+}
+
+.search button:hover{
+    background-color: rgb(255, 140, 0);
 }
 
 .weatherIcon{
