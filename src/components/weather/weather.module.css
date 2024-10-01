@@ -1,26 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 .container{
     min-height: 100vh;
     background-color: rgb(220, 242, 242);
     align-items: center;
-    
-}
-
-.container{
     display: flex;
     justify-content: center;
+    color: rgb(41, 40, 40);
 }
 
 .weatherWrapper{
     min-width: 35%;
-    min-height: 60%;
+    min-height: 65%;
     padding: 10px;
-    background-color: rgb(51, 109, 175);
+    background-color: rgb(71, 165, 223);
     border-radius: 11px;
     flex-wrap: wrap;
 }
 
 .title{
-    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
     text-align: center;
 } 
 
