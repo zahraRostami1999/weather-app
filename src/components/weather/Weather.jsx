@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, useRef } from "react";
+import WeatherImage from '../weatherImage/WeatherImage.jsx';
 
 function Weather() {
     const inputRef = useRef()
@@ -14,7 +15,10 @@ function Weather() {
       const response = await fetch(url);
       const data = await response.json();
       console.log(data); // Display the weather data in the console for testing purposes
-      setWeatherData({tempurature: Math.floor(data.main.temp)});
+      setWeatherData({
+        tempurature: Math.floor(data.main.temp),
+        icon: data.weather[0].icon
+      });
       console.log(weatherData); 
     } catch (error) {
       console.error("Error fetching weather data:", error);
@@ -42,7 +46,7 @@ function Weather() {
           </button>
         </div>
         <div className={styled.weatherIcon}>
-          <FontAwesomeIcon icon={faSun} size="9x" color="orange" />
+          <WeatherImage weatherIcon={weatherData.icon} />
         </div>
         <div className={styled.weatherTemp}>
           <h3>{weatherData.tempurature}°C</h3>
