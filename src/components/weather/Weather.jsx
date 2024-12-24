@@ -15,7 +15,7 @@ function Weather() {
       const response = await fetch(url);
       const data = await response.json();
       setWeatherData({
-        tempurature: Math.floor(data.main.temp) + 1,
+        tempurature: Math.floor(data.main.temp) ,
         icon: data.weather[0].icon,
       });
     } catch (error) {
@@ -35,7 +35,7 @@ function Weather() {
       >
         <div className={styled.weatherWrapper}>
           <div className={styled.title}>
-            <h2>How is the weather in your city?</h2>
+            <h2>What is the temperature in your city?</h2>
           </div>
           <div className={styled.search}>
             <input ref={inputRef} type="text" placeholder="City:" />
