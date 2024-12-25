@@ -15,7 +15,7 @@ function Weather() {
       const response = await fetch(url);
       const data = await response.json();
       setWeatherData({
-        tempurature: Math.floor(data.main.temp) ,
+        tempurature: Math.floor(data.main.temp),
         icon: data.weather[0].icon,
       });
     } catch (error) {
@@ -23,19 +23,11 @@ function Weather() {
     }
   };
   return (
-      <div
-        className={styled.container}
-        style={{
-          backgroundImage: `url(${background})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "100vh",
-          width: "100vw",
-        }}
-      >
+    <>
+      <div className={styled.container}>
         <div className={styled.weatherWrapper}>
           <div className={styled.title}>
-            <h2>What is the temperature in your city?</h2>
+            {/* <h2>What is the temperature in your city?</h2> */}
           </div>
           <div className={styled.search}>
             <input ref={inputRef} type="text" placeholder="City:" />
@@ -43,7 +35,7 @@ function Weather() {
               <FontAwesomeIcon
                 icon={faSearch}
                 size="lg"
-                style={{ color: "#333" }}
+                style={{ color: "#111" }}
               />
             </button>
           </div>
@@ -55,6 +47,9 @@ function Weather() {
           </div>
         </div>
       </div>
+    </>
+
+
   );
 }
 
