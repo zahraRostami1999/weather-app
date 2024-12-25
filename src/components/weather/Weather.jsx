@@ -20,14 +20,13 @@ function Weather() {
       });
     } catch (error) {
       console.error("Error fetching weather data:", error);
-    }
+    }    
   };
   return (
     <>
       <div className={styled.container}>
         <div className={styled.weatherWrapper}>
           <div className={styled.title}>
-            {/* <h2>What is the temperature in your city?</h2> */}
           </div>
           <div className={styled.search}>
             <input ref={inputRef} type="text" placeholder="City:" />
@@ -43,7 +42,7 @@ function Weather() {
             <WeatherImage weatherIcon={weatherData.icon} />
           </div>
           <div className={styled.weatherTemp}>
-            <h5>{weatherData.tempurature}°C</h5>
+            <h5>{weatherData.tempurature===undefined ? <span></span> : <span>{weatherData.tempurature}°</span>}</h5>
           </div>
         </div>
       </div>
