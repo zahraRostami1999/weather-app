@@ -7,7 +7,14 @@
   box-sizing: border-box;
 }
 
-.app{
-  background-color: rgb(40, 40, 168);
-  display: grid;
+.App{
+  height: 100vh;
+  background-image: url(./assets/image/background.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
