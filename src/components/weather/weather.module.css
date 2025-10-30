@@ -9,14 +9,15 @@
 }
 
 .weatherWrapper {
-   width: 80%;
-   height: 40%;
-   border-radius: 9px;
-   padding: 20px 10px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
+  width: 80%;
+  height: 40%;
+  border-radius: 9px;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .search {
@@ -52,7 +53,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 200px;
+   height: 120px;
    padding-top: 20px;
 }
 
@@ -63,5 +64,21 @@
    width: 90%;
    font-size: 36px;
    color: beige;
+   padding-top: 10px;
 }
 
+@media (max-width: 768px) {
+  .weatherWrapper {
+     height: 25%;
+    gap: 4px;                
+    padding: 15px 8px;
+  }
+
+  .weatherIcon {
+    height: 80px;             
+  }
+
+  .weatherTemp {
+    font-size: 28px;
+  }
+}
