@@ -25,8 +25,6 @@ function Weather() {
     <>
       <div className={styled.container}>
         <div className={styled.weatherWrapper}>
-          <div className={styled.title}>
-          </div>
           <div className={styled.search}>
             <input
               ref={inputRef}
@@ -50,7 +48,7 @@ function Weather() {
             <WeatherImage weatherIcon={weatherData.icon} />
           </div>
           <div className={styled.weatherTemp}>
-            <h5>{weatherData.tempurature === undefined ? <span></span> : <span>{weatherData.tempurature}°</span>}</h5>
+            <h5>{weatherData.tempurature === undefined ? <span></span> : <span>{weatherData.tempurature} °C</span>}</h5>
           </div>
         </div>
       </div>
