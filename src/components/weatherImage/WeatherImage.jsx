@@ -1,11 +1,11 @@
 import styled from "./weatherImage.module.css";
-import clear from "../../assets/image/1.png";
-import fewClouds from "../../assets/image/2.png";
-import brokenClouds from "../../assets/image/4.png";
-import showerRain from "../../assets/image/9.png";
-import thunderstorm from "../../assets/image/11.png";
-import snow from "../../assets/image/13.png";
-import mist from "../../assets/image/50.png";
+import clear from "../../assets/image/1.webp";
+import fewClouds from "../../assets/image/2.webp";
+import brokenClouds from "../../assets/image/4.webp";
+import showerRain from "../../assets/image/9.webp";
+import thunderstorm from "../../assets/image/11.webp";
+import snow from "../../assets/image/13.webp";
+import mist from "../../assets/image/50.webp";
 
 function WeatherImage(props) {
   const image = {

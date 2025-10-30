@@ -1,7 +1,6 @@
 import styled from "./weather.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import background from "../../assets/image/background.jpg";
 import { useState, useRef } from "react";
 import WeatherImage from "../weatherImage/WeatherImage.jsx";
 
@@ -20,7 +19,7 @@ function Weather() {
       });
     } catch (error) {
       console.error("Error fetching weather data:", error);
-    }    
+    }
   };
   return (
     <>
@@ -29,7 +28,16 @@ function Weather() {
           <div className={styled.title}>
           </div>
           <div className={styled.search}>
-            <input ref={inputRef} type="text" placeholder="City:" />
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="City:"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  search(inputRef.current.value);
+                }
+              }}
+            />
             <button onClick={() => search(inputRef.current.value)}>
               <FontAwesomeIcon
                 icon={faSearch}
@@ -42,7 +50,7 @@ function Weather() {
             <WeatherImage weatherIcon={weatherData.icon} />
           </div>
           <div className={styled.weatherTemp}>
-            <h5>{weatherData.tempurature===undefined ? <span></span> : <span>{weatherData.tempurature}°</span>}</h5>
+            <h5>{weatherData.tempurature === undefined ? <span></span> : <span>{weatherData.tempurature}°</span>}</h5>
           </div>
         </div>
       </div>

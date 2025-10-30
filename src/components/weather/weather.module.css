@@ -1,66 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 .container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  background-color: rgba(0, 0, 0, 0.7);
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   background-color: rgba(0, 0, 0, 0.7);
 }
 
 .weatherWrapper {
-  width: 80%;
-  height: 50%;
-  border-radius: 9px;
-  padding: 20px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+   width: 80%;
+   height: 40%;
+   border-radius: 9px;
+   padding: 20px 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
 }
 
-
 .search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  font-size: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 90%;
+   font-size: 40px;
 }
 
 .search input {
-  font-size: 20px;
+   font-size: 20px;
 
-  width: 90%;
-  border: none;
-  outline: none;
-  padding: 10px 24px;
-  border-radius: 25px;
+   width: 90%;
+   border: none;
+   outline: none;
+   padding: 10px 24px;
+   border-radius: 25px;
 }
 
 .search button {
-  border: none;
-  border-radius: 100%;
-  padding: 16px;
-  background-color: rgb(250, 153, 34);
+   border: none;
+   border-radius: 100%;
+   padding: 16px;
+   background-color: rgb(250, 153, 34);
 }
 
 .search button:hover {
-  background-color: rgb(255, 140, 0);
+   background-color: rgb(255, 140, 0);
 }
 
 .weatherIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 200px;
+   padding-top: 20px;
 }
 
 .weatherTemp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  font-size: 36px;
-  color: beige;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 90%;
+   font-size: 36px;
+   color: beige;
 }
+
